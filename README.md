@@ -1,4 +1,4 @@
-# A library to simulate realistic injuries on a game agent.
+# A library to simulate realistic injuries on a game agent. It is intended for use with any Lua game engines.
 
 ### Example usage:
 
