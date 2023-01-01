@@ -1,8 +1,6 @@
-local human = require("lib.humanBodyInjuryGenerator")
+local bodyGen = require("lib.humanBodyInjuryGenerator")
 
-local body = human.getHumanBody()
-body.causeInjuries()
+local human = bodyGen.getHumanBody()
+human.causeInjuries()
 
-print(body.getPrettyMedicalReport("Lt. John Doe"))
-
-
+print(human.getPrettyMedicalReport("Lt. John Doe"))
