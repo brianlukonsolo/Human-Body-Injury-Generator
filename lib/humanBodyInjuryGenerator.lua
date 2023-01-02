@@ -184,9 +184,8 @@ function _M.getHumanBody()
           end
           --insert injuries
 
-          -- Death
           if injury.isFatal == true then
---            print("\n>>>>> !!! Crewman dead !!! <<<<")
+            -- agent is dead
             humanBody.isAlive = false
             --for the medical report
             humanBody.causeOfDeath = injury.name
@@ -203,30 +202,6 @@ function _M.getHumanBody()
     local medicalReport = ""
     
     for bodyPart, injury in pairs(humanBody.injuries) do
-    --    print("\n============================ INJURY =============================================")    
-    --    print("### [injury type]      : " .. injury.name)
-    --    print("    [body part]        : " .. key)
-        
-    --    local characteristics = ""
-    --    if injury.isBleeding == true then
-    --      characteristics = characteristics .. "( bleeding )"
-    --    end
-    --    if injury.isInPain == true then
-    --      characteristics = characteristics .. "( painful )"
-    --    end
-    --    if injury.isFatal == true then
-    --      characteristics = characteristics .. "( fatal )"
-    --    end
-    --    if characteristics ~= "" then
-    --      print("    [details]: " .. characteristics)
-    --    end
-        
-    --    -- Death
-    --    if isFatalInjury == true then
-    --      print("\n>>>>> !!! Crewman dead !!! <<<<")
-    --      break
-    --    end
-
       local listOfInjuriesForBodyPart = ""
 
       for index,  detail in pairs(injury) do
